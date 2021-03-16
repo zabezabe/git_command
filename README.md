@@ -106,7 +106,7 @@ bn = rev-parse --abbrev-ref HEAD
 ```
 
 ```bash
-$ git pull && git fetch --tags --purne && git branch --marged=$(git bn) | grep -vE 'develop|master|$(git bn)' | xargs git branch -d
+$ git pull && git fetch --tags --prune && git branch --merged=$(git bn) | grep -vE 'develop|master|$(git bn)' | xargs git branch -d
 ```
 このコマンドを書いた実行ファイルをルートディレクトリなどに置いておくと使いたいときに指定するだけで不要なブランチが削除できる
 ### たまに使う
